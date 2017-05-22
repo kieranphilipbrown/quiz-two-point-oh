@@ -1,0 +1,327 @@
+﻿/* 
+Site: Quiz Two Point Oh
+Author: Kieran Brown
+Website: https://www.kieranpbrown.co.uk
+*/
+
+/* General SASS Styles */
+
+$font-stack: Calibri, Arial, sans-serif;
+
+@import 'questioncolours';
+
+/* General Styles */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font-stack;
+	margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+	width: 100%;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+}
+
+h1 {
+	font-size: 40px;
+	margin: 15px 0;
+	color: #fff;
+	font-family: 'Amatic sc', sans-serif;
+}
+
+h2 {
+	font-size: 26px;
+	margin: 15px 0;
+    text-transform: uppercase;
+}
+
+h3 {
+	font-size: 24px;
+	margin: 15px 0;
+}
+
+h4 {
+	font-size: 18px;
+	margin: 15px 0;
+}
+
+p {
+	line-height: 1.5;
+	margin: 15px 0;
+	color: #4d4d4d;
+    font-size: 16px;
+}
+
+li {
+	list-style-type: none;
+	margin: 15px 0;
+}
+
+hr {
+	border: 0;
+    height: 2px;
+    background: #333;
+    background-image: linear-gradient(to right, #000, #9b1c51, #000);
+	margin: 10px auto;
+	width: 40%;
+}
+
+.bottom {
+	border: 0;
+    height: 2px;
+    background: #333;
+    background-image: linear-gradient(to right, #9b1c51, #9b1c51, #9b1c51);
+	margin: 10px auto;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	height: 100%;
+	color: #4d4d4d;
+}
+
+.page-width {
+	max-width: 1200px;
+}
+
+.trans {
+	transition: .4s ease;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+.strapline {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 26px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.22);
+    height: 60px;
+	z-index: 100;
+}
+
+.logo {
+    width: 55px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.logo:hover {
+	opacity: .8;
+}
+
+/* Parallax */
+
+.parallax {
+    display: block;
+	height: 100vh;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-title-contain {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px 0;
+	color: #fff;
+	/*background-color: red;*/
+	width: 90%;
+}
+
+.main-content-contain {
+	text-align: center;
+    /* padding: 20px 0; */
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.main-content-containter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* Button */
+
+.button {
+	display: inline-block;
+	margin: 30px 10px 30px 10px;
+	padding: 10px 20px;
+	animation: fade-bottom-up .4s ease;
+}
+
+.button a {
+	color: #fff;
+}
+
+.light {
+	border: 1px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.light:hover {
+	background-color: #fff;
+}
+
+a .light:hover {
+	color: #000;
+}
+
+.button-surround {
+	background-color: #000; 
+	height: auto; 
+	display: flex;
+	text-align: center;
+}
+
+@keyframes fade-bottom-up {
+0% {
+    opacity: 0;
+    transform: translateY(70px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+/***** Big Box *****/
+
+.big-box {
+    width: 100%;
+    height: auto;
+}
+
+.big-box {
+    text-align: center;
+    padding: 50px 0;
+    text-transform: uppercase;
+    color: #5a5a5a;
+    font-family: $font-stack;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+}
+
+/* Form */
+
+form {
+    text-align: center;
+    -webkit-appearance: none;
+}
+
+input {
+    display: block;
+    border:0;
+    outline: 0;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    border:0;
+    outline: 0;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 20px;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.46); 
+        }
+}
+
+.score-tracker {
+    position: fixed;
+    right: 50px;
+    top: 40px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.score-tracker p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none;
+}
+
+/**********************************
+
+ Media Queries
+
+**********************************/
+
+@media only screen and (min-width: 1000px) {
+
+input {
+    display: inline-block;
+    padding: 20px 50px;
+}
+
+button {
+    display: inline-block;
+    padding: 20px 50px;
+}
+
+h1 {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+p {
+    font-size: 25px;
+}
+}
