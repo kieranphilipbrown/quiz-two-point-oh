@@ -39,9 +39,9 @@ submitButton.addEventListener('click', () => {
 		if (guess.toLowerCase() === answer) {
 			progress.score++;
 			document.getElementById("score").innerHTML = progress.score;
-			document.getElementById("oneMessage").innerText = "Yes that's correct";
+			document.getElementById("oneMessage").innerText = "Yes, that's correct.";
 		} else {
-			document.getElementById("oneMessage").innerText = "Sorry, " + guess +" is incorrect, the correct answer is " + toTitleCase(answer) + ".";
+			document.getElementById("oneMessage").innerText = "Sorry, " + guess +" is incorrect. The correct answer is " + toTitleCase(answer) + ".";
 		}
 		
 	document.getElementById("nextQuestion1").style.display = "block";
@@ -72,9 +72,9 @@ submitButton2.addEventListener('click', () => {
 		if (guess.toLowerCase() === answer) {
 			progress.score++;
 			document.getElementById("score").innerHTML = progress.score;
-			document.getElementById("oneMessage2").innerText = "Yes that's correct";
+			document.getElementById("oneMessage2").innerText = "Yes, that's correct.";
 		} else {
-			document.getElementById("oneMessage2").innerText = "Sorry, " + guess +" is incorrect, the correct answer is " + toTitleCase(answer) + ".";
+			document.getElementById("oneMessage2").innerText = "Sorry, " + guess +" is incorrect. The correct answer is " + toTitleCase(answer) + ".";
 		}
 		
 	document.getElementById("nextQuestion2").style.display = "block";
@@ -82,7 +82,7 @@ submitButton2.addEventListener('click', () => {
 	}
 });
 
-// Second question 
+// Third question 
 var submitButton3 = document.getElementById('myButton3');
 submitButton3.addEventListener('click', () => {
 	var guessInput = document.getElementById('guessInput3');
@@ -105,12 +105,45 @@ submitButton3.addEventListener('click', () => {
 		if (guess.toLowerCase() === answer) {
 			progress.score++;
 			document.getElementById("score").innerHTML = progress.score;
-			document.getElementById("oneMessage3").innerText = "Yes that's correct";
+			document.getElementById("oneMessage3").innerText = "Yes, that's correct.";
 		} else {
-			document.getElementById("oneMessage3").innerText = "Sorry, " + guess +" is incorrect, the correct answer is " + toTitleCase(answer) + ".";
+			document.getElementById("oneMessage3").innerText = "Sorry, " + guess +" is incorrect. The correct answer is " + toTitleCase(answer) + ".";
 		}
 		
 	document.getElementById("nextQuestion3").style.display = "block";
-	document.getElementById("three").style.display = "block";
+	document.getElementById("four").style.display = "block";
 	}
-}); 
+});
+
+// Fourth question
+var submitButton4 = document.getElementById('myButton4');
+submitButton4.addEventListener('click', () => {
+	var guessInput = document.getElementById('guessInput4');
+	var message = document.getElementById('oneMessage4');
+
+	var guess = guessInput.value;
+	var answer = 'pc';
+
+	if (guess === '') {
+		alert('Please provide an answer.');
+		return;
+	}
+	
+	submitButton4.disabled = true;
+
+	if (progress.question === 4)
+	{
+		progress.question = 5;
+
+		if (guess.toLowerCase() === answer) {
+			progress.score++;
+			document.getElementById("score").innerHTML = progress.score;
+			document.getElementById("oneMessage4").innerText = "Yes, that's correct.";
+		} else {
+			document.getElementById("oneMessage4").innerText = "Sorry, " + guess +" is incorrect. The correct answer is " + toTitleCase(answer) + " ;)";
+		}
+		
+	document.getElementById("nextQuestion4").style.display = "block";
+	document.getElementById("five").style.display = "block";
+	}
+});
