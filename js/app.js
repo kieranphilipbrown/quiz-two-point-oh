@@ -147,3 +147,51 @@ submitButton4.addEventListener('click', () => {
 	document.getElementById("five").style.display = "block";
 	}
 });
+
+// Fifth question
+var submitButton5 = document.getElementById('myButton5');
+submitButton5.addEventListener('click', () => {
+	var guessInput = document.getElementById('guessInput5');
+	var message = document.getElementById('oneMessage5');
+
+	var guess = guessInput.value;
+	var answer = '11';
+
+	if (guess === '') {
+		alert('Please provide an answer.');
+		return;
+	}
+	
+	submitButton5.disabled = true;
+
+	if (progress.question === 5)
+	{
+		progress.question = 6;
+
+		if (guess.toLowerCase() === answer) {
+			progress.score++;
+			document.getElementById("score").innerHTML = progress.score;
+			document.getElementById("oneMessage5").innerText = "Yes, that's correct.";
+		} else {
+			document.getElementById("oneMessage5").innerText = "Sorry, " + guess +" is incorrect. The correct answer is " + toTitleCase(answer) + ".";
+		}
+		
+	document.getElementById("nextQuestion5").style.display = "block";
+	document.getElementById("six").style.display = "block";
+	}
+
+// Results
+document.getElementById("resultMessage").innerText = "Your overall score is " + progress.score + " out of 5";
+if ( progress.score === 5 ) {
+	document.getElementById("result").innerText = "Congratulations, you win the gold medal.";
+} else if ( progress.score >= 3 ) {
+	document.getElementById("result").innerText = "Congratulations, you win the silver medal.";
+} else if ( progress.score >= 1 ) {
+	document.getElementById("result").innerText = "Congratulations, you win the bronze medal.";
+} else {
+	document.getElementById("result").innerText = "Sorry, you don't win anything. Better luck next time.";
+}
+
+document.getElementById("nextQuestion6").style.display = "block";
+
+});
