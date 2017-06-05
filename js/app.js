@@ -69,7 +69,7 @@ submitButton2.addEventListener('click', () => {
 	{
 		progress.question =3;
 
-		if (guess.toLowerCase() === answer) {
+		if (guess.toLowerCase() === answer || '6' ) {
 			progress.score++;
 			document.getElementById("score").innerHTML = progress.score;
 			document.getElementById("oneMessage2").innerText = "Yes, that's correct.";
@@ -102,7 +102,7 @@ submitButton3.addEventListener('click', () => {
 	{
 		progress.question =4;
 
-		if (guess.toLowerCase() === answer) {
+		if (guess.toLowerCase() === answer || 'fifty two') {
 			progress.score++;
 			document.getElementById("score").innerHTML = progress.score;
 			document.getElementById("oneMessage3").innerText = "Yes, that's correct.";
@@ -168,7 +168,7 @@ submitButton5.addEventListener('click', () => {
 	{
 		progress.question = 6;
 
-		if (guess.toLowerCase() === answer) {
+		if (guess.toLowerCase() === answer || 'eleven') {
 			progress.score++;
 			document.getElementById("score").innerHTML = progress.score;
 			document.getElementById("oneMessage5").innerText = "Yes, that's correct.";
